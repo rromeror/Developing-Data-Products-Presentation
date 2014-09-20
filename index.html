@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Internet Tariff Calculator</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Internet Tariff Calculator">
+  <meta name="author" content="RRR">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Internet Tariff Calculator</h1>
+    <h2>Developing Data Products Project</h2>
+    <p>RRR<br/>Pricing Manager</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Outline</h2>
+  </hgroup>
+  <article data-timings="">
+    <ol>
+<li>Introduction</li>
+<li>Application</li>
+<li>Example</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Introduction</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Network operators design their tariff rules so as to optimize the utilization of their network resources. A tariff comprises two components, namely,</p>
+
+<ol>
+<li><p><code>Fixed charge</code>. It is the monthly fee you pay for your connection to be available, and represents the cost you are charged due to the network resources the operator has to reserve in order to guarantee the contract obligations.</p></li>
+<li><p><code>Usage charge</code>. This cost component reflects the traffic volume you actually send to and receive from the internet. This charge depends on the amount of data, measured in <code>Giga Bytes</code>, you transfer on your internet channel.</p></li>
+</ol>
+
+<p>As a customer, you are presented a set of tariff alternatives. These pricing options are designed to encourage users to select, in a self-interested way, their true <code>expected traffic volume</code>.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The application helps a customer to select an internet tariff. Using the max speed in Mbps (Mega bits per second) of the internet connection, the user can vary the mean rate of the channel so as to obtain,</p>
+
+<ol>
+<li><p>The traffic <code>volume [GBytes/month]</code>, i.e. the amount of data, that can be transferred with an average speed of <code>mean [Mbps/month]</code>. A parameter called <code>utilization [hours/month]</code> is calculated as an indicator of the percentage of time the channel is used.</p></li>
+<li><p>A plot that illustrates the existing dependency of the tariff with the <code>mean speed</code> of the channel, i.e. with the actual usage of the connection.</p></li>
+</ol>
+
+<p>The application is available at <a href="http://rromeror.shinyapps.io/Project">http://rromeror.shinyapps.io/Project</a>.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Example</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Currently, a mobile operator can offer an LTE internet access with the following contract parameters: 10 GBytes/month, 150 Mbps max speed. </p>
+
+<p>If you try to guess the corresponding average rate with the tool, you will notice that with a mean rate of 0.2 Mbps, i.e 200 Kbps, you will have a volume of information per month,</p>
+
+<pre><code class="r">Traffic_volume &lt;- paste(0.2*2628000/8000, &quot;[GBytes/month]&quot;);Traffic_volume
+</code></pre>
+
+<pre><code>## [1] &quot;65.7 [GBytes/month]&quot;
+</code></pre>
+
+<p>Which is 6.5 times higher than the proposed plan. This result means that you are actually using your channel less than 2.92 Hours/month. Although advertisements attempt to lure users with <code>super high speeds</code>, in reality, all users are confined to be in the region of the curve (see application) close to &quot;zero&quot;, in other words, customers actually do operate at very low average bit rates.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Outline'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Introduction'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Application'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Example'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
